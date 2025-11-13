@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- The link to vite.svg has been removed as it's not in the project files -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KS2 Maths SATs Practice</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
+    <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
@@ -19,7 +20,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- The path to the script has been made relative -->
-    <script type="module" src="index.tsx"></script>
+    <!-- Change script type to "text/babel" and use a relative path -->
+    <script type="text/babel" data-type="module" src="index.tsx"></script>
   </body>
 </html>
